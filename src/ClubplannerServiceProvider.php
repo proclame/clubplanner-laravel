@@ -22,7 +22,7 @@ class ClubplannerServiceProvider extends ServiceProvider
         $this->app->bind('clubplanner', function ($app) {
             $connection = new Connection();
             $connection->setApiKey(config('clubplanner.clubplanner_token'));
-            $connection->setApiUrl(config('clubplanner.clubplanner_url');
+            $connection->setApiUrl(config('clubplanner.clubplanner_url'));
             $connection->connect();
 
             $clubplanner = new Clubplanner($connection);
