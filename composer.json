@@ -1,0 +1,35 @@
+{
+    "name": "proclame/clubplanner-laravel",
+    "homepage": "https://github.com/proclame/clubplanner-laravel",
+    "description": "Laravel wrapper around the clubplanner-php package",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "clubplanner"
+    ],
+    "authors": [
+        {
+            "name": "Nick Mispoulier",
+            "email": "nick@proclame.be"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "proclame/clubplanner-php": ">=0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Proclame\\Clubplanner\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Proclame\\Clubplanner\\ClubplannerServiceProvider"
+            ],
+            "aliases": {
+                "Clubplanner": "Proclame\\Clubplanner\\ClubplannerFacade"
+            }
+        }
+    }
+}
